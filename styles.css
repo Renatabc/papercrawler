@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+#whiteboard {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.pile {
+    position: absolute;
+    top: 20px;
+    left: 20px; 
+}
+
+.pile#pile2 {
+    left: 200px;
+}
+
+.card {
+    width: 150px; /* Aumentar o tamanho das cartas */
+    height: 200px; /* Aumentar o tamanho das cartas */
+    background-color: #1e90ff;
+    color: white;
+    font-size: 60px; /* Ajustar o tamanho do ícone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    position: absolute;
+    user-select: none;
+    transition: background-image 0.6s; /* Apenas a imagem de fundo deve mudar */
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(43\).png'); /* Imagem de fundo do verso */
+    background-size: cover;
+    background-position: center;
+}
+
+.card.flipped {
+    /* Remove a rotação, não é necessário para a mudança de imagem */
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(43\).png');
+    background-size: 150px 200px; /* Imagem de fundo padrão */
+}
+
+/* Classes para as cartas da primeira pilha (monstros chefes) */
+.card.flipped.monster1 {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(20\).png');
+}
+
+.card.flipped.monster2 {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(21\).png');
+}
+
+.card.flipped.monster3 {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(22\).png');
+}
+
+.card.flipped.monster4 {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(23\).png');
+}
+
+/* Classes para as cartas da segunda pilha */
+.card.flipped.room {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(3\).png');
+}
+
+.card.flipped.room1 {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(4\).png');
+}
+
+.card.flipped.room2 {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(5\).png');
+}
+
+.card.flipped.room3 {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(6\).png');
+}
+
+.card.flipped.room4 {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(7\).png');
+}
+
+.card.flipped.room5 {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(8\).png');
+}
+
+.card.flipped.room6 {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(9\).png');
+}
+
+.card.flipped.minion {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(24\).png');
+}
+
+.card.flipped.minion1 {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(25\).png');
+}
+
+.card.flipped.merchant {
+    background-image: url('./Papercrawlerfantasycard1/carta\ \(2\).png');
+}
+
+.card.zoom {
+    transform: scale(2); /* Ajuste o valor para o nível de zoom desejado */
+    z-index: 10; /* Para garantir que a carta apareça sobre outras cartas */
+}
